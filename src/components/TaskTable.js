@@ -24,7 +24,7 @@ const TableBody = (props) => {
 				<th className="align-middle" scope="row">{ row.id }</th>
 				<td className="align-middle col-md-10">{ row.task }</td>
 				<td><Button customClasses="btn-primary" callbackFunc={ () => props.callbackForEditButton(row.id) }>Edit</Button></td>
-				<td><a href={"http://localhost:8000/delete.php?id=" + row.id} className="btn btn-danger" role="button">Delete</a></td>
+				<td><a href={ `http://localhost:8000/tasks/delete.php?id=${row.id}&formFrom=${window.location.href}` } className="btn btn-danger" role="button">Delete</a></td>
 			</tr>
 		);
 	})
@@ -34,7 +34,7 @@ const TableBody = (props) => {
 class TaskTable extends Component {
 	constructor(props) {
 		super(props);
-		const headers = Object.keys(this.props.taskData[0]);
+		const headers = ['id', 'task'];
 		this.state = { columnHeaders: headers};
 	}
 	

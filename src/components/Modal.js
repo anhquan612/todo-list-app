@@ -27,6 +27,8 @@ class Modal extends Component {
 									<label>Task Name</label>
 									<input type="text" name="task" className="form-control mt-2" placeholder="Enter your task name here..." required/>
 									<input type="hidden" name="id" value={ this.props.taskId }/>
+									<input type="hidden" name="username" value={ this.props.username }/>
+									<input type="hidden" name="formFrom" value={ window.location.href }/>
 								</div>
 								<input type="submit" name="submit" value={ this.props.formPurpose } className="btn btn-success" />
 							</form>

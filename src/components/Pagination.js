@@ -5,7 +5,7 @@ class Pagination extends Component {
 		super(props);
 		const pageList = [];
 		for (var i = 1; i <= this.props.numberOfPage; ++i) {
-			const targetURL = `/todos/?page=${i}&tasksPerPage=${this.props.tasksPerPage}`;
+			const targetURL = `/todos/?page=${i}&tasksPerPage=${this.props.tasksPerPage}&filterPattern=${this.props.filterPattern}`;
 			var liClasses = "page-item ";
 			if (i === this.props.page) {
 				liClasses += "disabled";

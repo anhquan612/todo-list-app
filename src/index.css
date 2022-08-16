@@ -16,6 +16,10 @@ code {
 	border: 1px solid  black;
 }
 
+.last-btn {
+	margin-left: 1rem;
+}
+
 thead tr:last-child {
 	border-bottom: 1px solid #dddddd;
 }
@@ -32,4 +36,8 @@ tbody tr:not(:first-child) {
 
 a:link {
 	text-decoration: none;
+}
+
+.task-filter {
+	height: 2rem;
 }
